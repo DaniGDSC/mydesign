@@ -36,7 +36,7 @@ body {
 .home-page {
     width: 100%;
     position: relative;
-    background-color: var(--color-1);
+    background-color: var(--color-31);
     height: 100vh;
     overflow: hidden;
     text-align: left;
@@ -80,7 +80,7 @@ body {
 
 .cyber {
     position: relative;
-    color: var(--color-31)
+    color: var(--color-1)
 }
 
 .home-page-inner {
@@ -109,7 +109,7 @@ body {
     position: relative;
     line-height: 96px;
     display: inline-block;
-    color: var(--color-31);
+    color: var(--color-1);
 }
 
 .span {
