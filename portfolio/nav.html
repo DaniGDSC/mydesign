@@ -1,35 +1,31 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="home-page">
-        <nav class="cyber-wrapper">
-            <a href="main.html" class="cyber">Cyber Space</a>
-        </nav>
-        <nav class="home-parent">
-            <a href="#" class="cyber">Education</a>
-
-            <div class="dropdown">
-                <a href="#" class="cyber">Project</a>
-                <div class="dropdown-content">
-                    <a href="#">Data</a>
-                    <a href="#">Cybersecurity</a>
-                </div>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+            <button class="dropbtn">Project 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#data">Data</a>
+                <a href="#cybersecurity">Cybersecurity</a>
             </div>
-
-            <a href="#" class="cyber">Expertise</a>
-        </nav>
+        </div> 
     </div>
 
+    <div class="content">
+        <h1>Welcome to the Website</h1>
+        <p>Scroll down to see the fixed navigation bar in action.</p>
+    </div>
 </body>
-
 </html>
