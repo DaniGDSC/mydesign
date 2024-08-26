@@ -82,16 +82,7 @@ body {
     position: relative;
     color: var(--color-1)
 }
-
-.home-page-inner {
-    position: absolute;
-    top: 112px;
-    border-top: 1px solid var(--color-whitesmoke-100);
-    box-sizing: border-box;
-    width: 100vw;
-    height: 1px;
-}
-
+    
 .data-parent {
     position: absolute;
     top: 334px;
