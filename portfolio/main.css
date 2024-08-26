@@ -154,6 +154,36 @@ body {
     flex-shrink: 0;
 }
 
+/* Add this CSS for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-31); /* background color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--color-1); /* link color */
+    padding: var(--padding-3xs) var(--padding-13xl); /* adjust padding */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color-3); /* hover background color */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 
 
