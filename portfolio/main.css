@@ -16,7 +16,7 @@ body {
     /* Colors */
     --color-1: #222831;
     --color-31: #eee;
-    --color-whitesmoke-100: rgba(238, 238, 238, 0.1);
+    --color-whitesmoke-100: rgba(3, 3, 3, 0.83);
     --color-3: #00adb5;
     
     /* Gaps */
@@ -24,9 +24,9 @@ body {
     
     /* Paddings */
     --padding-3xs: 10px;
-    --padding-13xl: 32px;
-    --padding-29xl: 48px;
-    --padding-77xl: 96px;
+    --padding-13xl: 30px;
+    --padding-29xl: 40px;
+    --padding-77xl: 90px;
     
     /* Border radiuses */
     --br-5xl: 24px;
@@ -85,7 +85,7 @@ body {
 
 .home-page-inner {
     position: absolute;
-    top: 131.5px;
+    top: 112px;
     border-top: 1px solid var(--color-whitesmoke-100);
     box-sizing: border-box;
     width: 100vw;
