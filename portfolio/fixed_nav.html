@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Advanced Portfolio</title>
+    <!-- Add Google Sans font -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add custom styles -->
+    <style>
+        body {
+            font-family: 'Google Sans', sans-serif;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header with fixed navigation -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-gray-800">Your Name</div>
+                <!-- Navigation links (hidden on mobile) -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="#about" class="text-gray-600 hover:text-gray-800">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-gray-800">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-gray-800">Projects</a>
+                    <a href="#experience" class="text-gray-600 hover:text-gray-800">Experience</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-800">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <!-- Home section with profile picture and brief introduction -->
+        <section id="home" class="text-center py-20">
+            <img src="/api/placeholder/150/150" alt="Your Name" class="rounded-full mx-auto mb-4">
+            <h1 class="text-4xl font-bold mb-2">Your Name</h1>
+            <p class="text-xl text-gray-600 mb-4">Software Engineer | Problem Solver | Tech Enthusiast</p>
+            <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Download Resume</a>
+        </section>
+
+        <!-- About Me section -->
+        <section id="about" class="mb-16">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="text-gray-700">Your professional background and passion for technology go here.</p>
+        </section>
+
+        <!-- Skills & Expertise section -->
+        <section id="skills" class="mb-16">
+            <h2 class="text-3xl font-bold mb-4">Skills & Expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Programming Languages -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="font-bold mb-2">Programming Languages</h3>
+                    <ul class="list-disc pl-5">
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <!-- Frameworks -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="font-bold mb-2">Frameworks</h3>
+                    <ul class="list-disc pl-5">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Django</li>
+                    </ul>
+                </div>
+                <!-- Tools -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="font-bold mb-2">Tools</h3>
+                    <ul class="list-disc pl-5">
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>AWS</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects" class="mb-16">
+            <h2 class="text-3xl font-bold mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Project Name 1</h3>
+                    <p class="text-gray-600 mb-4">Brief project description</p>
+                    <div class="flex space-x-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">React</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Node.js</span>
+                    </div>
+                    <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Project Name 2</h3>
+                    <p class="text-gray-600 mb-4">Brief project description</p>
+                    <div class="flex space-x-2 mb-4">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Python</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Django</span>
+                    </div>
+                    <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience section -->
+        <section id="experience" class="mb-16">
+            <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
+            <div class="timeline relative border-l-2 border-gray-300 pl-5">
+                <div class="timeline-item relative mb-8 pl-5">
+                    <div class="timeline-year absolute left-[-40px] top-0 bg-white p-2 rounded shadow-md z-10 text-sm font-bold text-gray-800">2020</div>
+                    <div class="bg-white p-6 rounded shadow mb-4">
+                        <h3 class="text-xl font-bold">Software Engineer</h3>
+                        <p class="text-gray-600">Company Name | 2020 - Present</p>
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Accomplishment 1</li>
+                            <li>Accomplishment 2</li>
+                            <li>Accomplishment 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add more timeline items for previous work experiences -->
+            </div>
+        </section>
+
+    <!-- Footer with copyright and social links -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-gray-300">LinkedIn</a>
+                <a href="#" class="hover:text-gray-300">GitHub</a>
+                <a href="#" class="hover:text-gray-300">Face</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
