@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function focusYear(index) {
         timelineItems.forEach((item, i) => {
             if (i === index) {
-                item.classList.add('focused');
-                item.classList.remove('blurred');
+                item.classList.add('animate-fade-in');
+                item.classList.remove('animate-fade-out', 'opacity-20', 'blur-sm');
             } else {
-                item.classList.add('blurred');
-                item.classList.remove('focused');
+                item.classList.add('animate-fade-out', 'opacity-20', 'blur-sm');
+                item.classList.remove('animate-fade-in');
             }
         });
     }
@@ -28,15 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const events = item.querySelectorAll('.timeline-event');
             const isFocused = item.classList.contains('focused');
             
-            if (isFocused) {
-                events.forEach(event => {
+            events.forEach((event, index) => {
+                if (isFocused || index === events.length - 1) {
                     event.style.display = 'block';
-                });
-            } else {
-                events.forEach((event, index) => {
-                    event.style.display = (index === events.length - 1) ? 'block' : 'none';
-                });
-            }
+                } else {
+                    event.style.display = 'none';
+                }
+            });
         });
     }
 
@@ -44,23 +42,50 @@ document.addEventListener('DOMContentLoaded', function() {
     focusYear(currentIndex);
     updateEvents();
 
-    // Listen for mouse scroll events
+    // Modified wheel event listener
     window.addEventListener('wheel', function(event) {
-        if (event.deltaY < 0) {
+        if (event.deltaY < 0 && currentIndex > 0) {
+            event.preventDefault();
             changeYear('up');
-        } else if (event.deltaY > 0) {
+            updateEvents();
+        } else if (event.deltaY > 0 && currentIndex < timelineItems.length - 1) {
+            event.preventDefault();
             changeYear('down');
+            updateEvents();
         }
-        updateEvents();
+    }, { passive: false });
+
+    // Add touch events for mobile devices
+    let touchStartY = 0;
+    window.addEventListener('touchstart', function(event) {
+        touchStartY = event.touches[0].clientY;
     });
 
-    // Listen for arrow key events
-    window.addEventListener('keydown', function(event) {
-        if (event.key === 'ArrowUp') {
+    window.addEventListener('touchmove', function(event) {
+        const touchEndY = event.touches[0].clientY;
+        const deltaY = touchEndY - touchStartY;
+
+        if (deltaY > 50 && currentIndex > 0) {
+            event.preventDefault();
             changeYear('up');
-        } else if (event.key === 'ArrowDown') {
+            updateEvents();
+        } else if (deltaY < -50 && currentIndex < timelineItems.length - 1) {
+            event.preventDefault();
             changeYear('down');
+            updateEvents();
         }
-        updateEvents();
+    }, { passive: false });
+
+    // Modified keydown event listener
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowUp' && currentIndex > 0) {
+            event.preventDefault();
+            changeYear('up');
+            updateEvents();
+        } else if (event.key === 'ArrowDown' && currentIndex < timelineItems.length - 1) {
+            event.preventDefault();
+            changeYear('down');
+            updateEvents();
+        }
     });
 });

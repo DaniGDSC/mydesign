@@ -4,68 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Timeline Visualization</title>
-    <link rel="stylesheet" href="memoryflow.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="timeline-container">
-        <div class="timeline">
-            <div class="timeline-item" data-year="2024">
-                <div class="timeline-year">2024</div>
+<body class="bg-gray-100 p-5 flex justify-center items-center min-h-screen font-sans">
+    <div class="timeline-container max-w-3xl w-full mx-auto p-5">
+        <div class="timeline relative border-l-2 border-gray-800 pl-5">
+            <div class="timeline-item relative mb-8 pl-5" data-year="2024">
+                <div class="timeline-year absolute left-[-70px] top-0 bg-white p-2 rounded shadow-md cursor-pointer z-10 text-lg font-bold text-gray-800 hover:text-blue-600 transition-colors">2024</div>
                 <div class="timeline-events">
-                    <div class="timeline-event">
-                        <h3>Graduated with a Degree</h3>
-                        <span class="event-date">December 30, 2024</span>
-                        <p>Completed my degree in System Modeling and Design.</p>
+                    <div class="timeline-event bg-white p-4 rounded shadow-md mb-3 hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Graduated with a Degree</h3>
+                        <span class="event-date text-sm text-gray-600 block mb-2">December 30, 2024</span>
+                        <p class="text-gray-700">Completed my degree in System Modeling and Design.</p>
                     </div>
-                    <div class="timeline-event">
-                        <h3>New Job Offer</h3>
-                        <p>Received a job offer from a top logistics company.</p>
-                        <span class="event-date">October 15, 2024</span>
+                    <div class="timeline-event bg-white p-4 rounded shadow-md mb-3 hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">New Job Offer</h3>
+                        <p class="text-gray-700">Received a job offer from a top logistics company.</p>
+                        <span class="event-date text-sm text-gray-600 block mt-2">October 15, 2024</span>
                     </div>
-                    <div class="timeline-event">
-                        <h3>Started Internship</h3>
-                        <p>Started an internship in the logistics field.</p>
-                        <span class="event-date">July 5, 2024</span>
+                    <div class="timeline-event bg-white p-4 rounded shadow-md mb-3 hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Started Internship</h3>
+                        <p class="text-gray-700">Started an internship in the logistics field.</p>
+                        <span class="event-date text-sm text-gray-600 block mt-2">July 5, 2024</span>
                     </div>
                 </div>
             </div>
-            <div class="timeline-item" data-year="2023">
-                <div class="timeline-year">2023</div>
+            <div class="timeline-item relative mb-8 pl-5" data-year="2023">
+                <div class="timeline-year absolute left-[-70px] top-0 bg-white p-2 rounded shadow-md cursor-pointer z-10 text-lg font-bold text-gray-800 hover:text-blue-600 transition-colors">2023</div>
                 <div class="timeline-events">
-                    <div class="timeline-event">
-                        <h3>Completed Major Project</h3>
-                        <p>Successfully managed a major logistics project involving international supply chains.</p>
-                        <span class="event-date">November 20, 2023</span>
+                    <div class="timeline-event bg-white p-4 rounded shadow-md mb-3 hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Completed Major Project</h3>
+                        <p class="text-gray-700">Successfully managed a major logistics project involving international supply chains.</p>
+                        <span class="event-date text-sm text-gray-600 block mt-2">November 20, 2023</span>
                     </div>
-                    <div class="timeline-event">
-                        <h3>Moved to a New City</h3>
-                        <p>Relocated to a new city for career advancement.</p>
-                        <span class="event-date">August 10, 2023</span>
+                    <div class="timeline-event bg-white p-4 rounded shadow-md mb-3 hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Moved to a New City</h3>
+                        <p class="text-gray-700">Relocated to a new city for career advancement.</p>
+                        <span class="event-date text-sm text-gray-600 block mt-2">August 10, 2023</span>
                     </div>
-                    <div class="timeline-event">
-                        <h3>Company Training</h3>
-                        <p>Completed training for advanced logistics systems.</p>
-                        <span class="event-date">March 15, 2023</span>
+                    <div class="timeline-event bg-white p-4 rounded shadow-md mb-3 hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Company Training</h3>
+                        <p class="text-gray-700">Completed training for advanced logistics systems.</p>
+                        <span class="event-date text-sm text-gray-600 block mt-2">March 15, 2023</span>
                     </div>
                 </div>
             </div>
-            <div class="timeline-item" data-year="2022">
-                <div class="timeline-year">2022</div>
+            <div class="timeline-item relative mb-8 pl-5" data-year="2022">
+                <div class="timeline-year absolute left-[-70px] top-0 bg-white p-2 rounded shadow-md cursor-pointer z-10 text-lg font-bold text-gray-800 hover:text-blue-600 transition-colors">2022</div>
                 <div class="timeline-events">
-                    <div class="timeline-event">
-                        <h3>Completed Major Project</h3>
-                        <p>Successfully managed a major logistics project involving international supply chains.</p>
-                        <span class="event-date">November 20, 2023</span>
-                    </div>
-                    <div class="timeline-event">
-                        <h3>Moved to a New City</h3>
-                        <p>Relocated to a new city for career advancement.</p>
-                        <span class="event-date">August 10, 2023</span>
-                    </div>
-                    <div class="timeline-event">
-                        <h3>Company Training</h3>
-                        <p>Completed training for advanced logistics systems.</p>
-                        <span class="event-date">March 15, 2023</span>
+                    <div class="timeline-event bg-white p-4 rounded shadow-md mb-3 hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Started New Position</h3>
+                        <p class="text-gray-700">Began working as a junior logistics coordinator.</p>
+                        <span class="event-date text-sm text-gray-600 block mt-2">September 1, 2022</span>
                     </div>
                 </div>
             </div>
